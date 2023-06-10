@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/prismic": "^3.0.0-rc.2",
+    "@types/splitting": "^1.0.0",
+    "nuxt": "^3.3.1",
+    "sass": "^1.59.3",
+    "vite-svg-loader": "^4.0.0"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.0.3",
+    "@vimeo/player": "^2.20.1",
+    "contentful": "^9.3.5",
+    "gsap": "^3.11.5",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "splitting": "^1.0.6",
+    "youtube-vue3": "^0.1.15"
+  }
+}
