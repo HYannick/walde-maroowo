@@ -26,20 +26,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "JosefinSans Extra Bold";
-  src: local("JosefinSans Bold"),
-  url(@/assets/styles/fonts/josefinSans/JosefinSans-ExtraBold.ttf) format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JosefinSans Black";
-  src: local("JosefinSans Black"),
-  url(@/assets/styles/fonts/josefinSans/JosefinSans-Black.ttf) format("truetype");
-  font-display: swap;
-}
-
 :root {
   /*fonts*/
   --text-font-light: 'JosefinSans Light', sans-serif;
