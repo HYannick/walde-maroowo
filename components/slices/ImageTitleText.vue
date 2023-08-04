@@ -29,38 +29,30 @@ const variants = computed(() => ({
 
 <style lang="scss">
 .image-title-text-container {
-  max-width: 144rem;
-  width: 100%;
-  margin: 0 auto 20rem;
+  width: 100vw;
+  margin: 0 auto;
   display: flex;
-  &.-reverse-order {
-    justify-content: flex-end;
-  }
+  flex-direction: column;
 }
 .image-title-text-link {
   margin-top: 2rem;
   font-size: 2rem;
   cursor: pointer;
 }
+
 .image-title-text {
   display: flex;
-  gap: 6rem;
-  text-align: right;
-
-  &.-reverse-order {
-    text-align: left;
-
-    .image-title-text-content {
-      order: 1;
-      align-items: flex-start;
-    }
-  }
-
+  flex-direction: column;
+  padding: 2rem;
+  text-align: justify;
+  margin-top: 10rem;
   &-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    order: 2;
+    margin-top: 4rem;
   }
 
   &-title {
@@ -75,14 +67,13 @@ const variants = computed(() => ({
       opacity: 0.2;
       width: 5rem;
       height: 0.8rem;
-      margin-bottom: 3rem;
-      text-align: right;
+      margin: 0 auto 3rem;
     }
   }
 
   &-picture {
-    width: 50rem;
-    height: 46rem;
+    width: 100%;
+    height: 30rem;
     overflow: hidden;
     border-radius: 1rem;
     object-fit: cover;
@@ -91,14 +82,13 @@ const variants = computed(() => ({
   &-pictures {
     display: flex;
     flex-direction: column;
+    order: 1;
   }
 
   &.-with-polygon {
     align-items: center;
-    max-width: 120rem;
     .image-title-text-pictures {
-      width: 50rem;
-      height: 50rem;
+      width: 100%;
       clip-path: var(--polygon-24);
       aspect-ratio: 1;
       img {
@@ -111,11 +101,13 @@ const variants = computed(() => ({
       display: block;
       max-width: 65rem;
       font-size: 2.5rem;
+      text-align: center;
     }
     .image-title-text-title {
       font-family: var(--text-font-title);
       font-size: 3.5rem;
       margin-bottom: 2rem;
+      text-align: center;
       &:after {
         content: '';
         display: none;
@@ -123,10 +115,9 @@ const variants = computed(() => ({
     }
   }
   &.-with-two-pictures {
+    margin-top: 0;
     .image-title-text-content {
-      order: 1;
-      align-items: flex-start;
-      text-align: left;
+      order: 2;
     }
 
     .image-title-text-pictures {
@@ -149,9 +140,96 @@ const variants = computed(() => ({
     }
 
     .image-title-text-picture:first-child {
-      max-width: 100rem;
-      width: 100%;
       margin-bottom: 5rem;
+    }
+  }
+}
+@media  screen and (min-width: 1366px) {
+  .image-title-text-container {
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto 15rem;
+    &.-reverse-order {
+      justify-content: flex-end;
+    }
+  }
+  .image-title-text {
+    display: flex;
+    gap: 6rem;
+    text-align: right;
+    flex-direction: row;
+    padding: 0rem;
+    margin-top: 10rem;
+    &.-reverse-order {
+      text-align: left;
+      .image-title-text-content {
+        order: 2;
+        align-items: flex-start;
+        .image-title-text-description {
+          display: block;
+          max-width: 65rem;
+          font-size: 2.5rem;
+          text-align: left;
+        }
+      }
+
+    }
+
+    &-content {
+      align-items: flex-end;
+      order: 1;
+      margin-top: 0;
+    }
+
+    &-title:after {
+        text-align: right;
+        margin: 0 0 3rem;
+    }
+
+    &-picture {
+      width: 50rem;
+      height: 46rem;
+    }
+
+    &.-with-polygon {
+      align-items: center;
+      .image-title-text-pictures {
+        width: 50rem;
+        height: 50rem;
+        clip-path: var(--polygon-24);
+        aspect-ratio: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .image-title-text-description {
+        display: block;
+        max-width: 65rem;
+        font-size: 2.5rem;
+        text-align: right;
+      }
+      .image-title-text-title {
+        font-family: var(--text-font-title);
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        &:after {
+          content: '';
+          display: none;
+        }
+      }
+    }
+    &.-with-two-pictures {
+      .image-title-text-content {
+        order: 2;
+        align-items: flex-start;
+      }
+
+      .image-title-text-picture:first-child {
+        max-width: 100rem;
+        width: 100%;
+      }
     }
   }
 }

@@ -51,11 +51,35 @@ const footerLinkSlice = computed(() => {
   }
   &-navigation {
     display: flex;
-    gap: 10rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
   }
   &-top-content {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@media  screen and (min-width: 1366px) {
+  .footer {
+    border-top: 0.1rem solid var(--footer-border-color);
+    margin-top: 5rem;
+    &-container {
+      max-width: 144rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5rem 1rem 0;
+    }
+    &-navigation {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10rem;
+    }
+    &-top-content {
+      flex-direction: row;
+    }
   }
 }
 </style>

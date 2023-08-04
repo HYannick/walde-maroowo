@@ -19,13 +19,13 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  font-size: 3.6rem;
+  font-size: 2.6rem;
   width: 100%;
   height: 50vh;
   max-width: 100rem;
   text-align: center;
-  margin: 0 auto 20rem;
-  line-height: 7rem;
+  margin: 0 auto;
+  line-height: 4rem;
   &.-full-height {
     height: 100vh;
   }
@@ -42,6 +42,13 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   }
   .intro-text {
     overflow: hidden;
+  }
+}
+@media  screen and (min-width: 1366px) {
+  .short-intro {
+    font-size: 3.6rem;
+    line-height: 7rem;
+    margin: 0 auto 20rem;
   }
 }
 </style>

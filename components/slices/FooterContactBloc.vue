@@ -22,8 +22,24 @@ const contactInfos = computed(() => props.slice[0].primary)
   display: flex;
   gap: 4rem;
   align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
   .contact-information {
-    text-align: right;
+    text-align: center;
+    order: 2;
+  }
+}
+@media  screen and (min-width: 1366px) {
+  .footer-contact-bloc {
+    flex-direction: row;
+    margin-top: 0;
+    .contact-information {
+      order: 1;
+      text-align: right;
+    }
+    .contact-logo {
+      order: 2;
+    }
   }
 }
 </style>

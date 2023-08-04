@@ -2,7 +2,7 @@
   <div class="drop-down-content">
     <div class="drop-down-content-item" :class="{'-active': activeIndex === index}" v-for="(item, index) in slice.items" :key="index" @click="toggleContent(index)">
       <PrismicRichText class="drop-down-content-title text" :field="item.title" />
-      <PrismicRichText class="drop-down-content-text text -body -light"  :field="item.text" />
+      <PrismicRichText class="drop-down-content-text text -large-body -light"  :field="item.text" />
     </div>
   </div>
 </template>
@@ -25,11 +25,13 @@ const toggleContent = (index) => {
 <style lang="scss">
 .drop-down-content {
   max-width: 144rem;
-  margin: 10rem auto;
+  margin: 0;
+  padding: 2rem;
   &-item {
     .drop-down-content-text {
       display: none;
-      margin-top: 3rem;
+      margin: 3rem auto;
+      text-align: justify;
     }
     &.-active {
       .drop-down-content-text {
@@ -39,7 +41,7 @@ const toggleContent = (index) => {
   }
   &-title {
     font-family: var(--text-font-title);
-    font-size: 6rem;
+    font-size: 3rem;
     cursor: pointer;
     &:after {
       content: '';
@@ -48,6 +50,37 @@ const toggleContent = (index) => {
       height: 0.1rem;
       background-color: var(--color-black);
       transform: scaleX(1);
+    }
+  }
+}
+@media  screen and (min-width: 1366px) {
+  .drop-down-content {
+    max-width: 144rem;
+    margin: 10rem auto;
+    &-item {
+      .drop-down-content-text {
+        display: none;
+        margin-top: 3rem;
+        text-align: left;
+      }
+      &.-active {
+        .drop-down-content-text {
+          display: block;
+        }
+      }
+    }
+    &-title {
+      font-family: var(--text-font-title);
+      font-size: 6rem;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        background-color: var(--color-black);
+        transform: scaleX(1);
+      }
     }
   }
 }
