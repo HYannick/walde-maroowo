@@ -101,7 +101,7 @@ const variants = computed(() => ({
       display: block;
       max-width: 65rem;
       font-size: 2.5rem;
-      text-align: center;
+      text-align: justify;
     }
     .image-title-text-title {
       font-family: var(--text-font-title);

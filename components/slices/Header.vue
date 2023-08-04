@@ -141,6 +141,7 @@ const toggleNavigation = () => navigationOpen.value = !navigationOpen.value
   .navigation {
     padding: 0;
     flex: 2;
+    height: auto;
     list-style: none;
     display: flex;
     align-items: center;

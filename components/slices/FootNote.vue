@@ -19,7 +19,7 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   position: relative;
   font-size: 2.5rem;
   padding: 2rem;
-  text-align: center;
+  text-align: justify;
   margin-top: 10rem;
   &-content {
     max-width: 144rem;
@@ -45,6 +45,7 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
     font-size: 3rem;
     padding: 5rem;
     margin-top: 0;
+    text-align: center;
     .poly-background {
       top: -20rem;
       clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);;

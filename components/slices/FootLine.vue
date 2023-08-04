@@ -16,9 +16,10 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
 .foot-line {
   max-width: 80rem;
   text-align: center;
-  margin: 20rem auto;
+  margin: 10rem auto;
   position: relative;
-  font-size: 3rem;
+  padding: 2rem;
+  font-size: 2.5rem;
   .polygon {
     position: absolute;
     z-index: -1;
@@ -26,10 +27,18 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.4;
+    opacity: 0.1;
     aspect-ratio: 1;
     background: var(--color-primary);
     clip-path: var(--polygon-14);
+  }
+}
+
+@media  screen and (min-width: 1366px) {
+  .foot-line {
+    font-size: 3rem;
+    padding: 0;
+    margin: 20rem auto;
   }
 }
 </style>

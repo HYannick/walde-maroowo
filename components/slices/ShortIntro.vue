@@ -48,7 +48,7 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   .short-intro {
     font-size: 3.6rem;
     line-height: 7rem;
-    margin: 0 auto 20rem;
+    margin: 20rem auto;
   }
 }
 </style>
